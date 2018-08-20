@@ -106,26 +106,9 @@ namespace StudentInformation.Areas.Admin.Controllers
         }
 
         // GET: Admin/Student/Delete/5
-        public ActionResult Delete(int? Id)
-        {
-            if(Id==null)
-            {
-                return RedirectToAction("Index");
-            }
-            Student student = _repo.GetById((int)Id);
-            if(student==null)
-            {
-                return RedirectToAction("Index");
-            }
-            return View(student);
-        }
-
-        // POST: Admin/Student/Delete/5
-        [HttpPost]
         public ActionResult Delete(int id)
         {
-
-            if (id == 0)
+            if (id==0 )
             {
                 return RedirectToAction("Index");
             }
@@ -136,5 +119,8 @@ namespace StudentInformation.Areas.Admin.Controllers
             }
             return View("Index");
         }
+
+        // POST: Admin/Student/Delete/5
+       
     }
 }

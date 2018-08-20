@@ -19,7 +19,7 @@ namespace StudentInformation.Repositories
         public List<StudentCourseInformationViewModel> GetAll()
         {
             var result = from s in db.Students
-                         join b in db.CoursesInformation on s.StudentId equals b.StudentId
+                         join b in db.StudentCourseInformation on s.StudentId equals b.StudentId
                          join c in db.Courses on b.CourseId equals c.CourseId
                          select new StudentCourseInformationViewModel
                          {
@@ -35,6 +35,7 @@ namespace StudentInformation.Repositories
             return result.ToList();
         }
        
+
 
 
 
