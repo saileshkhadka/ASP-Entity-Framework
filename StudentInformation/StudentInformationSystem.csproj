@@ -205,7 +205,6 @@
     <Content Include="Areas\Admin\Views\Course\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Course\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Course\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Course\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Course\Create.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
