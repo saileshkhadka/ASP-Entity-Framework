@@ -22,5 +22,6 @@ namespace StudentInformation.ViewModel
         [Required]
         [DisplayName("Email")]
         public string Email { get; set; }
+       
     }
 }

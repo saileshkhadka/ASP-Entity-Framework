@@ -22,7 +22,7 @@ namespace StudentInformation.ViewModel
         [Required]
         [DisplayName("Email")]
         public string Email { get; set; }
-        public DateTime DOB { get; set; }
+        public string DOB { get; set; }
         public int CourseId { get; set; }
         [Required]
         [DisplayName("CourseName")]

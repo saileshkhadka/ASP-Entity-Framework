@@ -13,6 +13,7 @@ namespace StudentInformation.Areas.Admin.Controllers
         // GET: Admin/StudentInformation
         public ActionResult Index()
         {
+            
             return View(_repo.GetAll());
         }
 

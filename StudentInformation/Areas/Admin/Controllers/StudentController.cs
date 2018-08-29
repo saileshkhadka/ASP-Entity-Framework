@@ -5,17 +5,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace StudentInformation.Areas.Admin.Controllers
 { 
     public class StudentController : Controller
     {
         private IstudentsRepository _repo = new StudentsRepository();
+        private StudentDbContext db = new StudentDbContext();
         // GET: Admin/Student
-        public ActionResult Index()
-        {
 
-            return View(_repo.GetAll());
+        public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page )
+        {
+            ViewBag.CurrentSort = sortOrder;
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var students = from s in db.Students
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.FirstName.Contains(searchString)||s.LastName.Contains(searchString));
+            }
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(db.Students.OrderBy(x => x.FirstName).ToPagedList(pageNumber, pageSize));
+
+            //return View(students);
         }
 
         // GET: Admin/Student/Details/5

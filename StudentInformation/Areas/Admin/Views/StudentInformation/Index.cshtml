@@ -13,10 +13,7 @@
             @Html.DisplayNameFor(model => model.StudentId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
+           Name
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Address)
@@ -26,6 +23,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DOB)
+            @DateTime.Parse(Html.DisplayFor(Model => Model.DOB).ToString()).ToShortDateString()
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CourseId)
@@ -60,10 +58,7 @@
             @Html.DisplayFor(modelItem => item.StudentId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(modelItem => item.FirstName)  @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Address)
@@ -73,6 +68,8 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DOB)
+            
+
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CourseId)
@@ -98,9 +95,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Status)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.StudentId })
-        </td>
+      
     </tr>
 }
 

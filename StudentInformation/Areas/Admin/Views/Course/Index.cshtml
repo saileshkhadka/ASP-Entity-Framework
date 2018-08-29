@@ -1,4 +1,7 @@
-﻿@model IEnumerable<StudentInformationSystem.Models.Course>
+﻿@*@model IEnumerable<StudentInformationSystem.Models.Course>*@
+@model PagedList.IPagedList<StudentInformationSystem.Models.Course>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -10,22 +13,29 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by CourseName: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CourseName)
+            CourseName
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CourseDescription)
+            CourseDescription
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CourseFee)
+            CourseFee
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Duration)
+            Duration
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Status)
+            Status
         </th>
         <th></th>
     </tr>
@@ -56,3 +66,10 @@
 }
 
 </table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+

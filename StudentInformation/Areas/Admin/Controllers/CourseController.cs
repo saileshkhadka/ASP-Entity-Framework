@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace StudentInformation.Areas.Admin.Controllers
 {
@@ -13,9 +14,33 @@ namespace StudentInformation.Areas.Admin.Controllers
     {
         private IcoursesRepository _repo = new CoursesRepository();
         // GET: Admin/Course
-        public ActionResult Index()
+        private StudentDbContext db = new StudentDbContext();
+         public ActionResult Index(string searchString, string sortOrder, string currentFilter, int? page )
         {
-            return View(_repo.GetAll());
+            ViewBag.CurrentSort = sortOrder;
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var courses = from s in db.Courses
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                courses = courses.Where(s => s.CourseName .Contains(searchString));
+            }
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(db.Courses.OrderBy(x => x.CourseName).ToPagedList(pageNumber, pageSize));
+
+            //return View(courses);
         }
 
         // GET: Admin/Course/Details/5

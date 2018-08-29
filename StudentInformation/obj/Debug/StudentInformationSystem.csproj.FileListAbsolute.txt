@@ -86,6 +86,8 @@ F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.ApplicationIns
 F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.Web.Infrastructure.dll
 F:\New folder\StudentInformation\StudentInformation\bin\Newtonsoft.Json.dll
+F:\New folder\StudentInformation\StudentInformation\bin\PagedList.dll
+F:\New folder\StudentInformation\StudentInformation\bin\PagedList.Mvc.dll
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Helpers.dll
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Mvc.dll
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Optimization.dll
@@ -102,6 +104,8 @@ F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.AI.Web.xml
 F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.AI.WindowsServer.xml
 F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.ApplicationInsights.xml
 F:\New folder\StudentInformation\StudentInformation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\New folder\StudentInformation\StudentInformation\bin\PagedList.xml
+F:\New folder\StudentInformation\StudentInformation\bin\PagedList.Mvc.xml
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Helpers.xml
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Mvc.xml
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.Optimization.xml
@@ -111,8 +115,8 @@ F:\New folder\StudentInformation\StudentInformation\bin\System.Web.WebPages.Depl
 F:\New folder\StudentInformation\StudentInformation\bin\System.Web.WebPages.Razor.xml
 F:\New folder\StudentInformation\StudentInformation\bin\Antlr3.Runtime.pdb
 F:\New folder\StudentInformation\StudentInformation\bin\Newtonsoft.Json.xml
-F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformationSystem.csprojResolveAssemblyReference.cache
 F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformation.Migrations.InitialSetup.resources
 F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformationSystem.csproj.GenerateResource.Cache
 F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformation.dll
 F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformation.pdb
+F:\New folder\StudentInformation\StudentInformation\obj\Debug\StudentInformationSystem.csprojResolveAssemblyReference.cache

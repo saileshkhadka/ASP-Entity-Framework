@@ -15,8 +15,8 @@ namespace StudentInformation
 
             routes.MapRoute(
                 name: "StudentInformation",
-                url: "{StudentInformation}/{action}",
-                defaults: new { controller = "StudentInformationController", action = "Index"}
+                url: "Admin/{controller}/{action}",
+                defaults: new { controller = "StudentInformation", action = "Index" }
             );
         }
     }
